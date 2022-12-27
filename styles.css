@@ -1,0 +1,161 @@
+body{
+    background-color: darkcyan;
+}
+.app{
+    position: absolute;
+    left: 50%;
+    top: 12em;
+    border: 2px solid black;
+    width: 22em;
+    height: 50vh;
+    background-image: url('pexels-photo-995743.jpeg');
+    background-blend-mode: multiply ;
+    background-color: blue;
+    box-shadow: 20px 20px 40px blue;
+}
+.clock-face{
+border-radius: 50%;
+height: 16em;
+width: 16em;
+border: 12px solid chartreuse;
+position: relative;
+top: 10em;
+margin: 0 2em;
+}
+.minute-hand{
+    background-color: chartreuse;
+    width: 8em;
+    height: .2em;
+    position: relative;
+    top: 50%;
+     transition: all ease-out 1s;
+}
+.minute-hand::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -.2em;
+
+    border-style: solid;
+    border-width: 4px 8px 4px 0;
+    border-color:transparent green transparent transparent;
+}
+.hour-hand{
+    background-color: chartreuse;
+    width: 4em;
+    height: .3em;
+    position: relative;
+    top: 48%;
+    left: 4.1em;
+    transform: rotate(90deg);
+    transition: all ease-out 1s;
+}
+.hour-hand::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -2.1px;
+
+    border-style: solid;
+    border-width: 4px 8px 4px 0;
+    border-color:transparent green transparent transparent;
+}
+.second-hand{
+    background-color:red;
+    width: 8em;
+    height: .1em;
+    position: relative;
+    top: 47%;
+    left: .1em;
+  transition:all ease-out .5s;
+
+}
+.second-hand::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -.3em;
+
+    border-style: solid;
+    border-width: 4px 8px 4px 0;
+    border-color:transparent rgb(170, 170, 160) transparent transparent;
+}
+.pin{
+    background-color: chartreuse;
+    width: .8em;
+    height: .8em;
+    position: relative;
+    top: 44%;
+    left: 47.6%;
+    border-radius: 50%;
+    z-index: 100;
+}
+.clock-face div:not(.pin,.number){
+    transform-origin: 100%;
+    transform-style: preserve-3d;
+    transform: rotate(90deg);
+}
+.v-number,.h-number,.line{
+    position: absolute;
+    color: #fff;
+}
+.v-number{
+    left: 47%;
+}
+.v-number:nth-child(2){
+    top: 94%;
+}
+.h-number{
+    top: 47%;
+}
+.h-number:nth-child(4){
+    left: 94%;
+}
+.line{
+    background-color: chartreuse;
+    width: 2em;
+    height: .1em;
+    
+}
+.line:nth-child(5){
+    transform: rotate(30deg);
+    top: 25%;
+}
+.line:nth-child(6){
+    transform: rotate(60deg);
+    top: 1em;
+    left: 3em;
+}
+.line:nth-child(7){
+    transform: rotate(30deg);
+    right: 0;
+    bottom: 4em;
+}
+.line:nth-child(8){
+    transform: rotate(60deg);
+    bottom: 8%;
+    right: 3.2em;
+}
+.line:nth-child(9){
+    transform: rotate(120deg);
+ right: 3em;
+ top: 1em;
+}
+.line:nth-child(10){
+    transform: rotate(150deg);
+    top: 25%;
+   right: 0;
+}
+.line:nth-child(11){
+    transform: rotate(120deg);
+left: 3em;
+ bottom: 1em;
+}
+.line:nth-child(12){
+    transform: rotate(150deg);
+    bottom: 25%;
+ 
+}
